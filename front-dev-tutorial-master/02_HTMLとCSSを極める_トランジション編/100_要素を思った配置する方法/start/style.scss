@@ -9,12 +9,19 @@
   width: 100px;
   height: 100px;
   font-weight: 600;
+  flex-grow: 1;
+  flex-basis: 300px;
+}
+.child.v1 {
+  flex-shrink: 0;
 }
 .child.v2 {
   background-color: palevioletred;
+  flex-grow: 2;
 }
 .child.v3 {
   background-color: rebeccapurple;
+  flex-grow: 3;
 }
 
 /**
@@ -22,7 +29,8 @@
  */
 /* インライン要素に対して */
 // .parent {
-//   text-align: left;
+//   text-align: right;
+//   letter-spacing: -6px;
 // }
 // .child {
 //     display: inline-block;
@@ -50,7 +58,6 @@
 
 // .parent {
 //   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//   align-items: flex-end;
+//   flex-direction: row-reverse;
+//   justify-content: center;
 // }
