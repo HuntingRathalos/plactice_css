@@ -1,5 +1,9 @@
+@use "sass:math";
+// @import "child";
+@use "child" as c;
+
 h1 {
-    background: orange;
-    font-size: 15px;
+    background: c.$cOrange;
+    font-size: math.div(30px, 2);
 }
 
