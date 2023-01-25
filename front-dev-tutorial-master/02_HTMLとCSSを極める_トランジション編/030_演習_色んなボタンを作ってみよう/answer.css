@@ -1,10 +1,19 @@
 #container {
   text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 #container > div {
-  flex-basis: 300px;
+  -webkit-flex-basis: 300px;
+      -ms-flex-preferred-size: 300px;
+          flex-basis: 300px;
 }
 
 .answer .btn {
@@ -16,42 +25,60 @@
   padding: 10px 40px;
   margin: 10px auto;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   color: black;
   text-decoration: none !important;
 }
+
 .answer .btn.float:hover {
   background-color: black;
   color: white;
-  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
+
 .answer .btn.filled {
   background-color: black;
   color: white;
-  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
+
 .answer .btn.filled:hover {
   background-color: white;
   color: black;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
+
 .answer .btn.letter-spacing:hover {
   background-color: black;
   letter-spacing: 3px;
   color: white;
 }
+
 .answer .btn.shadow {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
+
 .answer .btn.shadow:hover {
-  transform: translate(-2.5px, -2.5px);
-  box-shadow: 5px 5px 0 0 black;
+  -webkit-transform: translate(-2.5px, -2.5px);
+          transform: translate(-2.5px, -2.5px);
+  -webkit-box-shadow: 5px 5px 0 0 black;
+          box-shadow: 5px 5px 0 0 black;
 }
+
 .answer .btn.solid {
-  box-shadow: 2px 2px 0 0 black;
+  -webkit-box-shadow: 2px 2px 0 0 black;
+          box-shadow: 2px 2px 0 0 black;
   border-radius: 7px;
 }
+
 .answer .btn.solid:hover {
-  transform: translate(2px, 2px);
-  box-shadow: none;
-}/*# sourceMappingURL=answer.css.map */
+  -webkit-transform: translate(2px, 2px);
+          transform: translate(2px, 2px);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}

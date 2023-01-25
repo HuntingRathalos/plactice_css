@@ -10,13 +10,16 @@
   margin: 50px 0;
   font-weight: 600;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+
 .btn.slide-bg {
   position: relative;
   overflow: hidden;
   z-index: 1;
 }
+
 .btn.slide-bg span {
   display: inline-block;
   width: 100%;
@@ -25,13 +28,20 @@
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
   z-index: -1;
 }
+
 .btn.slide-bg:hover {
   color: white;
 }
+
 .btn.slide-bg:hover span {
-  transform: none;
-}/*# sourceMappingURL=style.css.map */
+  -webkit-transform: none;
+          transform: none;
+}
