@@ -1,29 +1,27 @@
-
 a {
-  color: orange;
+    color: orange;
 
-  &:visited {
-    color: blue;
-  }
+    &:visited {
+        color: blue;
+    }
 
-  &:hover{
-    color: red;
-  }
-  &:focus {
-    color: green;
-  }
-  &:active {
-    color: purple;
-  }
+    &:hover {
+        color: red;
+    }
+    &:focus {
+        color: green;
+    }
+    &:active {
+        color: purple;
+    }
 }
 
-
 div {
-  & span {
-    color: olive;
-    
-    &:not(.cls) {
-      color: purple;
+    & span {
+        color: olive;
+
+        &:not(.cls) {
+            color: purple;
+        }
     }
-  }
 }
