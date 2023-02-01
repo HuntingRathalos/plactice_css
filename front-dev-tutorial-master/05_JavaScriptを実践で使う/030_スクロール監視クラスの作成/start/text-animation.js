@@ -1,4 +1,3 @@
-
 class TextAnimation {
     constructor(el) {
         this.DOM = {};
