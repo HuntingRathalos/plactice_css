@@ -7,7 +7,6 @@ strong {
 .done {
   color: green;
 }
-
 .done::before {
-  content: '✔';
+  content: "✔";
 }

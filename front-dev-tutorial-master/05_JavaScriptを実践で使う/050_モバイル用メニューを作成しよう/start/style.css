@@ -34,14 +34,12 @@ body {
   top: 60px;
   width: 300px;
 }
-
 .mobile-menu__btn {
   background-color: unset;
   border: none;
   outline: none !important;
   cursor: pointer;
 }
-
 .mobile-menu__btn > span {
   background-color: black;
   width: 35px;
@@ -53,11 +51,9 @@ body {
   transition: transform 0.7s;
   transition: transform 0.7s, -webkit-transform 0.7s;
 }
-
 .mobile-menu__btn > span:last-child {
   margin-bottom: 0;
 }
-
 .mobile-menu__cover {
   position: absolute;
   top: 0;
@@ -71,7 +67,6 @@ body {
   transition: opacity 1s;
   cursor: pointer;
 }
-
 .mobile-menu__main {
   padding: 0;
   -webkit-perspective: 2000px;
@@ -79,7 +74,6 @@ body {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
 }
-
 .mobile-menu__item {
   list-style: none;
   display: block;
@@ -92,7 +86,6 @@ body {
   transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s;
   opacity: 0;
 }
-
 .mobile-menu__link {
   display: block;
   margin-top: 30px;
@@ -106,61 +99,50 @@ body {
   -webkit-box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
           box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
 }
-
 .menu-open .mobile-menu__cover {
   opacity: 1;
   visibility: visible;
 }
-
 .menu-open .mobile-menu__item {
   -webkit-transform: none;
           transform: none;
   opacity: 1;
 }
-
 .menu-open .mobile-menu__item:nth-child(1) {
   -webkit-transition-delay: 0.07s;
           transition-delay: 0.07s;
 }
-
 .menu-open .mobile-menu__item:nth-child(2) {
   -webkit-transition-delay: 0.14s;
           transition-delay: 0.14s;
 }
-
 .menu-open .mobile-menu__item:nth-child(3) {
   -webkit-transition-delay: 0.21s;
           transition-delay: 0.21s;
 }
-
 .menu-open .mobile-menu__item:nth-child(4) {
   -webkit-transition-delay: 0.28s;
           transition-delay: 0.28s;
 }
-
 .menu-open .mobile-menu__item:nth-child(5) {
   -webkit-transition-delay: 0.35s;
           transition-delay: 0.35s;
 }
-
 .menu-open .mobile-menu__btn > span {
   background-color: black;
 }
-
 .menu-open .mobile-menu__btn > span:nth-child(1) {
   -webkit-transition-delay: 70ms;
           transition-delay: 70ms;
   -webkit-transform: translateY(11px) rotate(135deg);
           transform: translateY(11px) rotate(135deg);
 }
-
 .menu-open .mobile-menu__btn > span:nth-child(2) {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
   -webkit-transform: translateX(-18px) scaleX(0);
           transform: translateX(-18px) scaleX(0);
 }
-
 .menu-open .mobile-menu__btn > span:nth-child(3) {
   -webkit-transition-delay: 140ms;
           transition-delay: 140ms;

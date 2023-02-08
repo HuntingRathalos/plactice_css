@@ -1,11 +1,9 @@
 .parent {
   color: blue;
 }
-
 .parent .element {
   color: purple;
 }
-
 .parent .element.second-child {
   color: black;
 }

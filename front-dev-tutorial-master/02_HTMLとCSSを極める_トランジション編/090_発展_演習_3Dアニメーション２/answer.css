@@ -14,7 +14,6 @@
   margin: 0 auto;
   cursor: pointer;
 }
-
 .answer .btn.cubic span {
   position: absolute;
   top: 0;
@@ -31,26 +30,22 @@
   -webkit-transform-origin: center center -25px;
           transform-origin: center center -25px;
 }
-
 .answer .btn.cubic .hovering {
   background-color: black;
   color: white;
   -webkit-transform: rotateX(90deg);
           transform: rotateX(90deg);
 }
-
 .answer .btn.cubic .default {
   background-color: white;
   color: black;
   -webkit-transform: rotateX(0);
           transform: rotateX(0);
 }
-
 .answer .btn.cubic:hover .hovering {
   -webkit-transform: rotateX(0);
           transform: rotateX(0);
 }
-
 .answer .btn.cubic:hover .default {
   -webkit-transform: rotateX(-90deg);
           transform: rotateX(-90deg);
