@@ -29,3 +29,41 @@
     flex-basis: 100%;
   }
 }
+
+.popular {
+  &__header {
+    @extend .content-width;
+  }
+  &__inner {
+  }
+
+  &__container {
+    @extend .content-width;
+    @extend .flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    @include mq(md) {
+      flex-basis: 47%;
+    }
+  }
+
+  &__title {
+  }
+
+  &__img {
+    height: 150px;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__btn {
+    text-align: center;
+    flex-basis: 100%;
+  }
+}
