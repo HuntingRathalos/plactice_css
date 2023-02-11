@@ -881,11 +881,11 @@ img {
   margin-bottom: 16px !important;
 }
 
-.mb-lg, .houses, .popular__btn {
+.mb-lg, .travel, .houses, .popular__btn {
   margin-bottom: 80px !important;
 }
 @media screen and (min-width: 960px) {
-  .mb-lg, .houses, .popular__btn {
+  .mb-lg, .travel, .houses, .popular__btn {
     margin-bottom: 150px !important;
   }
 }
@@ -903,7 +903,7 @@ img {
   }
 }
 
-.content-width, .houses, .popular__header, .popular__container {
+.content-width, .travel, .houses, .popular__header, .popular__container {
   width: 90%;
   margin: 0 auto;
   max-width: 1070px;
@@ -988,6 +988,35 @@ img {
   color: #535353;
 }
 
+.travel__inner {
+  background: #eaebe6;
+  padding: 15px;
+}
+@media screen and (min-width: 600px) {
+  .travel__inner {
+    padding: 50px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .travel__inner {
+    padding: 50px 150px;
+  }
+}
+.travel__img > img {
+  opacity: 1;
+}
+@media screen and (min-width: 600px) {
+  .travel__texts {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
 @media screen and (min-width: 600px) {
   .houses__item {
     -webkit-flex-basis: 50%;

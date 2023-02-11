@@ -1,6 +1,49 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
 
+.travel {
+  @extend .content-width;
+  @extend .mb-lg;
+
+  &__inner {
+    background: $cBgGray;
+    padding: 15px;
+
+    @include mq(md) {
+      padding: 50px;
+    }
+
+    @include mq(xl) {
+      padding: 50px 150px;
+    }
+  }
+
+  &__img {
+    & > img {
+      opacity: 1;
+    }
+  }
+
+  &__texts {
+    @include mq(md) {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    &-inner {
+    }
+  }
+
+  &__sub {
+  }
+
+  &__description {
+  }
+
+  &__btn {
+  }
+}
+
 .houses {
   @extend .content-width;
   @extend .mb-lg;
