@@ -877,7 +877,7 @@ img {
   vertical-align: bottom;
 }
 
-.mb-sm, .houses__title, .popular__title, .sub-title {
+.mb-sm, .travel__img, .houses__title, .popular__title, .sub-title {
   margin-bottom: 16px !important;
 }
 
@@ -890,7 +890,7 @@ img {
   }
 }
 
-.pb-sm {
+.pb-sm, .travel__texts {
   padding-bottom: 16px !important;
 }
 
@@ -909,7 +909,7 @@ img {
   max-width: 1070px;
 }
 
-.flex, .houses__inner, .popular__container {
+.flex, .travel__inner, .houses__inner, .popular__container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -921,7 +921,7 @@ img {
           flex-direction: column;
 }
 @media screen and (min-width: 600px) {
-  .flex, .houses__inner, .popular__container {
+  .flex, .travel__inner, .houses__inner, .popular__container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
@@ -991,6 +991,10 @@ img {
 .travel__inner {
   background: #eaebe6;
   padding: 15px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 @media screen and (min-width: 600px) {
   .travel__inner {
@@ -1002,8 +1006,27 @@ img {
     padding: 50px 150px;
   }
 }
+.travel__img {
+  height: 300px;
+}
+@media screen and (min-width: 600px) {
+  .travel__img {
+    -webkit-flex-basis: 47%;
+        -ms-flex-preferred-size: 47%;
+            flex-basis: 47%;
+  }
+}
+@media screen and (min-width: 960px) {
+  .travel__img {
+    height: 400px;
+  }
+}
 .travel__img > img {
   opacity: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 @media screen and (min-width: 600px) {
   .travel__texts {
@@ -1015,6 +1038,26 @@ img {
     -webkit-align-items: flex-end;
         -ms-flex-align: end;
             align-items: flex-end;
+    -webkit-flex-basis: 47%;
+        -ms-flex-preferred-size: 47%;
+            flex-basis: 47%;
+  }
+}
+.travel__title {
+  position: relative;
+}
+.travel__title::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100px;
+  top: 50%;
+  left: -120px;
+  background-color: black;
+}
+@media screen and (min-width: 960px) {
+  .travel__description {
+    margin-bottom: 40px;
   }
 }
 @media screen and (min-width: 600px) {
