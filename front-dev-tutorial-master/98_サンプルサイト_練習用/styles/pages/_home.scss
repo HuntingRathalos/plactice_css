@@ -49,7 +49,10 @@
       flex-basis: 47%;
     }
 
-    &-inner {
+    &.inview {
+      & .travel__title::before {
+        @include animation($name: scaleX, $duration: 0.3s, $delay: 1.5s);
+      }
     }
   }
 
@@ -60,6 +63,7 @@
     position: relative;
 
     &::before {
+      display: none;
       content: "";
       position: absolute;
       height: 1px;
@@ -67,6 +71,12 @@
       top: 50%;
       left: -120px;
       background-color: $cBlack;
+      transform: scaleX(0);
+      transform-origin: right;
+
+      @include mq(lg) {
+        display: block;
+      }
     }
   }
 
@@ -77,6 +87,15 @@
   }
 
   &__btn {
+  }
+}
+@keyframes scaleX {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
   }
 }
 

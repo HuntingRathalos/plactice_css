@@ -1043,10 +1043,27 @@ img {
             flex-basis: 47%;
   }
 }
+.travel__texts.inview .travel__title::before {
+  -webkit-animation-name: scaleX;
+          animation-name: scaleX;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
 .travel__title {
   position: relative;
 }
 .travel__title::before {
+  display: none;
   content: "";
   position: absolute;
   height: 1px;
@@ -1054,10 +1071,39 @@ img {
   top: 50%;
   left: -120px;
   background-color: black;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+@media screen and (min-width: 960px) {
+  .travel__title::before {
+    display: block;
+  }
 }
 @media screen and (min-width: 960px) {
   .travel__description {
     margin-bottom: 40px;
+  }
+}
+@-webkit-keyframes scaleX {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+@keyframes scaleX {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
   }
 }
 @media screen and (min-width: 600px) {
