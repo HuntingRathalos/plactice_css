@@ -989,6 +989,8 @@ img {
 }
 
 .travel__inner {
+  position: relative;
+  z-index: 0;
   background: #eaebe6;
   padding: 15px;
   -webkit-box-pack: justify;
@@ -1008,6 +1010,8 @@ img {
 }
 .travel__img {
   height: 300px;
+  -webkit-box-shadow: inset 0 0 30px black;
+          box-shadow: inset 0 0 30px black;
 }
 @media screen and (min-width: 600px) {
   .travel__img {
@@ -1022,6 +1026,8 @@ img {
   }
 }
 .travel__img > img {
+  position: relative;
+  z-index: -1;
   opacity: 1;
   -o-object-fit: cover;
      object-fit: cover;

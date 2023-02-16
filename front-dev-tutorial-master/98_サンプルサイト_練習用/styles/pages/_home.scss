@@ -6,6 +6,8 @@
   @extend .mb-lg;
 
   &__inner {
+    position: relative;
+    z-index: 0;
     background: $cBgGray;
     padding: 15px;
     @extend .flex;
@@ -23,6 +25,7 @@
   &__img {
     height: 300px;
     @extend .mb-sm;
+    box-shadow: inset 0 0 30px $cBlack;
 
     @include mq(md) {
       flex-basis: 47%;
@@ -33,6 +36,8 @@
     }
 
     & > img {
+      position: relative;
+      z-index: -1;
       opacity: 1;
       object-fit: cover;
       width: 100%;
