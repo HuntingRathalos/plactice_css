@@ -61,9 +61,6 @@
     }
   }
 
-  &__sub {
-  }
-
   &__title {
     position: relative;
 
@@ -89,9 +86,6 @@
     @include mq(lg) {
       margin-bottom: 40px;
     }
-  }
-
-  &__btn {
   }
 }
 @keyframes scaleX {

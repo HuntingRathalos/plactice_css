@@ -1092,6 +1092,7 @@ img {
     margin-bottom: 40px;
   }
 }
+
 @-webkit-keyframes scaleX {
   0% {
     -webkit-transform: scaleX(0);
@@ -1102,6 +1103,7 @@ img {
             transform: scaleX(1);
   }
 }
+
 @keyframes scaleX {
   0% {
     -webkit-transform: scaleX(0);
