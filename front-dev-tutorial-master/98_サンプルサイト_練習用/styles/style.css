@@ -903,13 +903,13 @@ img {
   }
 }
 
-.content-width, .travel, .houses, .popular__header, .popular__container {
+.content-width, .travel, .houses, .popular__header, .popular__container, .footer {
   width: 90%;
   margin: 0 auto;
   max-width: 1070px;
 }
 
-.flex, .travel__inner, .houses__inner, .popular__container {
+.flex, .travel__inner, .houses__inner, .popular__container, .footer__nav, .footer__ul {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -921,7 +921,7 @@ img {
           flex-direction: column;
 }
 @media screen and (min-width: 600px) {
-  .flex, .travel__inner, .houses__inner, .popular__container {
+  .flex, .travel__inner, .houses__inner, .popular__container, .footer__nav, .footer__ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
@@ -1194,4 +1194,65 @@ img {
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%;
+}
+
+.footer {
+  padding: 60px 0px;
+}
+.footer__nav {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+.footer__ul {
+  list-style: none;
+  padding: 0;
+}
+.footer__li {
+  margin: 10px;
+}
+@media screen and (min-width: 600px) {
+  .footer__li {
+    margin-left: 0;
+    margin-right: 30px;
+  }
+}
+.footer__li > a {
+  color: #535353;
+  text-decoration: none;
+}
+.footer > .logo {
+  font-size: 38px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 600px) {
+  .footer > .logo {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.logo {
+  font-size: 42px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.logo__img {
+  width: 0.7em;
+}
+.logo__world {
+  color: #904669;
 }
