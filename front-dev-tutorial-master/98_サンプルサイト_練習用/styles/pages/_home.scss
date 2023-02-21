@@ -1,6 +1,64 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $navHeight;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @extend .content-width;
+  }
+
+  &__nav {
+    @extend .flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    display: none;
+    @include mq(lg) {
+      display: block;
+    }
+  }
+
+  &__ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__li {
+    margin: 10px;
+
+    @include mq(md) {
+      margin-left: 0;
+      margin-right: 30px;
+    }
+
+    & > a {
+      color: $cSubTitle;
+      text-decoration: none;
+    }
+  }
+  & > .logo {
+    justify-content: center;
+
+    @include mq(md) {
+      justify-content: flex-start;
+    }
+  }
+}
+
 .travel {
   @extend .content-width;
   @extend .mb-lg;
