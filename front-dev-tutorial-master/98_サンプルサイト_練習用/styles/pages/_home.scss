@@ -10,6 +10,12 @@
   background-color: transparent;
   display: flex;
   align-items: center;
+  z-index: 100;
+
+  &.triggered {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
+  }
 
   &__inner {
     display: flex;
@@ -46,8 +52,9 @@
     }
 
     & > a {
-      color: $cSubTitle;
+      color: $cBlack;
       text-decoration: none;
+      text-transform: uppercase;
     }
   }
   & > .logo {

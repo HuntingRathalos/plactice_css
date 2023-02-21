@@ -1008,6 +1008,12 @@ img {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 100;
+}
+.header.triggered {
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
+          box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
 }
 .header__inner {
   display: -webkit-box;
@@ -1062,8 +1068,9 @@ img {
   }
 }
 .header__li > a {
-  color: #535353;
+  color: black;
   text-decoration: none;
+  text-transform: uppercase;
 }
 .header > .logo {
   -webkit-box-pack: center;
