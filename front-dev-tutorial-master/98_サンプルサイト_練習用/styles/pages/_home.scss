@@ -1,6 +1,13 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
 
+#container {
+  transition: transform 0.5s, box-shadow 0.5s;
+  position: relative;
+  z-index: 10;
+  background-color: $cWhite;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -57,7 +64,8 @@
       text-transform: uppercase;
     }
   }
-  & > .logo {
+  & .logo {
+    font-size: 35px;
     justify-content: center;
 
     @include mq(md) {
