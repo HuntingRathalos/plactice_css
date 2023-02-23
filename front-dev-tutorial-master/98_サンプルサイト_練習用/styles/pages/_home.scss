@@ -320,3 +320,32 @@
     color: $cWineRed;
   }
 }
+
+.side {
+  display: none;
+  position: fixed;
+  top: 70%;
+  transform: translateY(-50%);
+
+  @include mq(xl) {
+    display: block;
+  }
+
+  &.left {
+    left: 50px;
+
+    & .side__inner {
+      transform: rotate(-90deg);
+      transform-origin: top left;
+    }
+  }
+
+  &.right {
+    right: 50px;
+
+    & .side__inner {
+      transform: rotate(90deg);
+      transform-origin: top right;
+    }
+  }
+}
