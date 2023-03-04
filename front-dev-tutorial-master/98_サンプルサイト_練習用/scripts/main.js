@@ -47,13 +47,14 @@ class Main {
     constructor() {
         this.header = document.querySelector("header");
         this._observers = [];
+        this.sides = document.querySelectorAll(".side");
         this.hero = new HeroSlider(".swiper");
         this._init();
     }
 
     _init() {
         new MobileMenu();
-        this._scrollInit();
+        Pace.on("done", this._scrollInit.bind(this));
     }
 
     destroy() {
@@ -65,6 +66,14 @@ class Main {
             new ScrollObserver(".nav-trigger", this._navAnimation.bind(this), {
                 once: false,
             }),
+            new ScrollObserver(
+                "#main-content",
+                this._sideAnimation.bind(this),
+                {
+                    once: false,
+                    rootMargin: "-300px 0px",
+                }
+            ),
             new ScrollObserver(
                 ".swiper",
                 this._toggleSlideAnimation.bind(this),
@@ -98,6 +107,14 @@ class Main {
             this.header.classList.remove("triggered");
         } else {
             this.header.classList.add("triggered");
+        }
+    }
+
+    _sideAnimation(el, inview) {
+        if (inview) {
+            this.sides.forEach((side) => side.classList.add("inview"));
+        } else {
+            this.sides.forEach((side) => side.classList.remove("inview"));
         }
     }
 
