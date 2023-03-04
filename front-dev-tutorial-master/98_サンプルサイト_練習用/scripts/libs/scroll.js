@@ -5,7 +5,7 @@ class ScrollObserver {
             root: null,
             rootMargin: "0px",
             threshold: 0,
-            once: true
+            once: true,
         };
         this.cb = cb;
         this.options = Object.assign(defaultOptions, options);
@@ -14,10 +14,10 @@ class ScrollObserver {
     }
     _init() {
         const callback = function (entries, observer) {
-            entries.forEach(entry => {
+            entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     this.cb(entry.target, true);
-                    if(this.once) {
+                    if (this.once) {
                         observer.unobserve(entry.target);
                     }
                 } else {
@@ -30,8 +30,8 @@ class ScrollObserver {
 
         // @see https://github.com/w3c/IntersectionObserver/tree/master/polyfill
         this.io.POLL_INTERVAL = 100;
-        
-        this.els.forEach(el => this.io.observe(el));
+
+        this.els.forEach((el) => this.io.observe(el));
     }
 
     destroy() {
