@@ -1,51 +1,59 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // const hero = new HeroSlider(".swiper");
-    // hero.start();
+// 下記コメントの内容をクラスに集約化
+// const hero = new HeroSlider(".swiper");
+// hero.start();
 
-    // const ta = new TweenTextAnimation(".tween-animate-title");
-    // ta.animate();
+// const ta = new TweenTextAnimation(".tween-animate-title");
+// ta.animate();
 
-    // const _textAnimation = function (el, inview) {
-    //     if (inview) {
-    //         const ta = new TweenTextAnimation(el);
-    //         ta.animate();
-    //     }
-    // };
+// const _textAnimation = function (el, inview) {
+//     if (inview) {
+//         const ta = new TweenTextAnimation(el);
+//         ta.animate();
+//     }
+// };
 
-    // const so = new ScrollObserver(".tween-animate-title", _textAnimation);
+// const so = new ScrollObserver(".tween-animate-title", _textAnimation);
 
-    // const _inviewAnimation = function (el, inview) {
-    //     if (inview) {
-    //         el.classList.add("inview");
-    //     } else {
-    //         el.classList.remove("inview");
-    //     }
-    // };
+// const _inviewAnimation = function (el, inview) {
+//     if (inview) {
+//         el.classList.add("inview");
+//     } else {
+//         el.classList.remove("inview");
+//     }
+// };
 
-    // const so2 = new ScrollObserver(".cover-slide", _inviewAnimation);
+// const so2 = new ScrollObserver(".cover-slide", _inviewAnimation);
 
-    // const header = document.querySelector("header");
+// const header = document.querySelector("header");
 
-    // const _navAnimation = function (el, inview) {
-    //     if (inview) {
-    //         header.classList.remove("triggered");
-    //     } else {
-    //         header.classList.add("triggered");
-    //     }
-    // };
+// const _navAnimation = function (el, inview) {
+//     if (inview) {
+//         header.classList.remove("triggered");
+//     } else {
+//         header.classList.add("triggered");
+//     }
+// };
 
-    // const so3 = new ScrollObserver(".nav-trigger", _navAnimation, {
-    //     once: false,
-    // });
+// const so3 = new ScrollObserver(".nav-trigger", _navAnimation, {
+//     once: false,
+// });
 
-    // new MobileMenu();
+// new MobileMenu();
 
-    new Main();
-});
+// HTML側のscriptrタグにdeferをつけることが今の主流。
+// その場合はDOMContentLoadedは不要
+// document.addEventListener("DOMContentLoaded", function () {});
 
+// これまで_で始めていたプロパティなど（プライベートなことを示す）は
+// 最新のブラウザでは#をつけることで実現できる（クラス外から呼び出し不可）
 class Main {
+    // #なプロパティを使う場合は、constructor外に定義しないとエラーになる
+    // ここで定義するとconstructor内のコメントアウトは不要
+    // #observers = [];
+
     constructor() {
         this.header = document.querySelector("header");
+        // this.#observers = [];
         this._observers = [];
         this.sides = document.querySelectorAll(".side");
         this.hero = new HeroSlider(".swiper");
@@ -83,6 +91,7 @@ class Main {
             ),
             // this使ってないのでbindいらず
             new ScrollObserver(".cover-slide", this._inviewAnimation),
+            new ScrollObserver(".appear", this._inviewAnimation),
             new ScrollObserver(".tween-animate-title", this._textAnimation)
         );
     }
@@ -126,3 +135,5 @@ class Main {
         }
     }
 }
+
+new Main();

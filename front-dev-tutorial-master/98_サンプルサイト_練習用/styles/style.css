@@ -1136,6 +1136,12 @@ main {
 }
 .travel__img {
   height: 300px;
+  -webkit-transition: -webkit-box-shadow 0.5s ease 1.6s;
+  transition: -webkit-box-shadow 0.5s ease 1.6s;
+  transition: box-shadow 0.5s ease 1.6s;
+  transition: box-shadow 0.5s ease 1.6s, -webkit-box-shadow 0.5s ease 1.6s;
+}
+.travel__img.inview {
   -webkit-box-shadow: inset 0 0 30px black;
           box-shadow: inset 0 0 30px black;
 }

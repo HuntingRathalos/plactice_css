@@ -112,7 +112,10 @@ main {
   &__img {
     height: 300px;
     @extend .mb-sm;
-    box-shadow: inset 0 0 30px $cBlack;
+    transition: box-shadow 0.5s ease 1.6s;
+    &.inview {
+      box-shadow: inset 0 0 30px $cBlack;
+    }
 
     @include mq(md) {
       flex-basis: 47%;
